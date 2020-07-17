@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    if params
+        h1 Welcome to #{params.subowner}'s Liason blog.
+        p #{params.subowner} owns a subsidiary of #{owner}'s Blog.
+    else
+        h1 Welcome to #{owner}'s Master Blog.
+        p #{owner} is the sole owner of this Master blog

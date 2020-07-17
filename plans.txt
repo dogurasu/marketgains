@@ -1,0 +1,16 @@
+Some Notes
+    - "How should I structure my app?"
+        - depends ons cale of appa nd team involved
+        - routes and other app specific logic can live in as many files as you wish in any directory structure
+
+
+MVP
+    - Have Account Functionality
+        - people can sign up and login and logout
+        - implement 2-FA
+        - people have profiles
+        - people have points from 'upvotes' or 'downvotes'
+
+    - Have Blog Functionality
+        - people can comment as anonymous or with an account
+        - people can upvote
