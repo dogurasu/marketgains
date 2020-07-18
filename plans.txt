@@ -3,10 +3,17 @@ Some Notes
         - depends ons cale of appa nd team involved
         - routes and other app specific logic can live in as many files as you wish in any directory structure
 
+TODO
+    - Hook up a Database (MySQL)
+        - hash out DB details (left off last time on figuring out how to setup a database module so that we could use a DB connection throughout our application) -> https://itnext.io/how-to-share-a-single-database-connection-in-a-node-js-express-js-app-fcad4cbcb1e
+        - grab some users through HTTP requests
+    - Create user signup and login functionality
+        - email forms??
 
 MVP
+    - Build a FrontEnd with React and React Native
     - Have Account Functionality
-        - people can sign up and login and logout
+        - User Registration and Signing In
         - implement 2-FA
         - people have profiles
         - people have points from 'upvotes' or 'downvotes'
@@ -14,3 +21,8 @@ MVP
     - Have Blog Functionality
         - people can comment as anonymous or with an account
         - people can upvote
+
+MYSQL Notes
+    - check status: sudo service mysql status
+    - start service: sudo service mysql start
+    - stop service: sudo service mysql stop
