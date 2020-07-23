@@ -1,11 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
+// connect db
+let db = require('../db');
+db.connect();
+
 // Fake Users Database
-let users = [
-    { username: 'dogurasu', email: 'deedee@g.com' },
-    { username: 'michelil', email: 'mimi@g.com' },
-]
+// let users = [
+//     { username: 'dogurasu', email: 'deedee@g.com' },
+//     { username: 'michelil', email: 'mimi@g.com' },
+// ]
 
 // list all users
 router.list = (req, res) => {

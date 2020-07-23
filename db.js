@@ -1,12 +1,10 @@
-// database
-const mysql = require('mysql');
-
-// initialize connection
-const db = mysql.createConnection({
+// bring in PostgreSQL
+const { Client } = require('pg');
+const db = new Client({
     host        : process.env.DB_HOST,
-    user        : process.env.DB_USER,
+    user        : process.env.PG_USER,
     password    : process.env.DB_PW,
-    // database    : process.env.DB_DB,
+    database    : process.env.DB_DB,
 });
 
 const connect = () => {
@@ -18,7 +16,7 @@ const get = () => {
 }
 
 const close = () => {
-    db.close();
+    db.end();
 }
 
 module.exports = {

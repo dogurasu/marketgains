@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "@mysql/xdevapi": "8.0.21",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
@@ -14,6 +15,7 @@
     "morgan": "~1.9.1",
     "mysql": "github:mysqljs/mysql",
     "nodemon": "^2.0.4",
+    "pg": "^8.3.0",
     "pug": "^3.0.0"
   }
 }
