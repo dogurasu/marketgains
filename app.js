@@ -24,7 +24,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-// create a virtual path prefix for public folders
 app.use('/static', express.static(path.join(__dirname, 'public'))); // register the public directory as 'static' folder
 app.use('/static2', express.static(path.join(__dirname, 'second_public'))); // register another static folder
 

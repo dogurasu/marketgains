@@ -5,21 +5,18 @@ var router = express.Router();
 let db = require('../db');
 db.connect();
 
-// Fake Users Database
-// let users = [
-//     { username: 'dogurasu', email: 'deedee@g.com' },
-//     { username: 'michelil', email: 'mimi@g.com' },
-// ]
-
 // list all users
 router.list = (req, res) => {
+    db.query(
+        
+    )
     res.render('users', {title: 'Users', users: users});
 }
 
 // load specific queried user
 router.load = (req, res, next) => {
     let id = req.params.id; // get the user id passed in the request as route params
-    
+
 }
 
 /* GET users listing. */

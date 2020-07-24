@@ -39,3 +39,10 @@ db_connection.query(query, (err, results, fields) => {
     console.log('Created Database.')
     res.send('Created database');
 });
+
+
+// Fake Users Database
+let users = [
+    { username: 'dogurasu', email: 'deedee@g.com' },
+    { username: 'michelil', email: 'mimi@g.com' },
+]

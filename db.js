@@ -1,5 +1,7 @@
 // bring in PostgreSQL
 const { Client } = require('pg');
+const { Pool } = require('pg');
+
 const db = new Client({
     host        : process.env.DB_HOST,
     user        : process.env.PG_USER,
