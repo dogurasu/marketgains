@@ -1,31 +1,32 @@
 // require all necessary modules (almost like packages)
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-// import dotenv variables
-require('dotenv').config();
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
+// const pool = require('./db');
+const pool = require('./db');
 
 // require Routers
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var blogRouter = require('./routes/blog');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const blogRouter = require('./routes/blog');
 
 // initialize our application
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/static', express.static(path.join(__dirname, 'public'))); // register the public directory as 'static' folder
-app.use('/static2', express.static(path.join(__dirname, 'second_public'))); // register another static folder
+// app.use('/static2', express.static(path.join(__dirname, 'second_public'))); // register another static folder
 
 // register routes
 app.use('/', indexRouter);

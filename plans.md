@@ -4,7 +4,8 @@
 - PostgreSQL
     - ***Documentation*** - https://www.postgresql.org/docs/current
     - ***Compartamentalize DB*** https://itnext.io/how-to-share-a-single-database-connection-in-a-node-js-express-js-app-fcad4cbcb1e
-    - 
+    - ***node-postgres Documentation*** - https://node-postgres.com/
+- FCC PERN Stack Video (https://www.youtube.com/watch?v=ldYcgPKEZC8)
 
 ## Structure
 - Current Routes
