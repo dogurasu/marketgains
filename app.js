@@ -33,6 +33,20 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/blog', blogRouter);
 
+// test route
+app.post("/stonks", async (req, res) => {
+    try {
+        const {ticker} = req.body;
+        const newTicker = await pool.query(
+            "INSERT INTO stonks (ticker) VALUES($1) RETURNING *",
+            [ticker]
+        );
+        res.json(newTicker.rows[0]);
+    } catch (err) {
+        console.log(err.message);
+    }
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));

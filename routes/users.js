@@ -25,21 +25,25 @@ router.load = (req, res, next) => {
 }
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-    // const vals = [];
-    let users;
-    pool.query('SELECT * FROM users;')
-        .then((res) => {
-            // console.log(res.rows[0].email);
-            console.log('in users');
-            users = res.rows;
-            // console.log(users);
-            // console.log(res.rows);
-        })
-        .catch((err) => {
-            console.log(err.stack);
-        })
-    res.send(`Here are some users:`); // ${users[0].email}
+router.get('/', async (req, res, next) => {
+    try {
+        // const vals = [];
+        let user;
+        user = await pool.query('SELECT * FROM users;');
+            // .then((q_res) => {
+            //     // console.log(res.rows[0].email);
+            //     console.log('in users');
+            //     users = q_res.rows;
+            //     console.log(users);
+            //     // console.log(res.rows);
+            // })
+            // .catch((err) => {
+            //     console.log(err.stack);
+            // })
+        res.send(`Here are some users: ${res.json(user.rows[0])}`); // ${users[0].email}
+    } catch(err) {
+        console.log(err.message);
+    }
 });
 
 // GET users for specific users
